@@ -66,10 +66,10 @@ const settings = {
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-      new webpack.NamedModulesPlugin(),
+    new webpack.NamedModulesPlugin(),
     new webpack.LoaderOptionsPlugin({
-      debug: true
-    }),
+                                      debug: true
+                                    }),
   ],
 };
 

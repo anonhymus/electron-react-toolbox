@@ -1,11 +1,18 @@
-<<<<<<< HEAD
-# react-toolbox-example
 
-### Getting Started
-1. Clone this repository
-2. Run `npm install && npm start`
-3. Visit `0.0.0.0:8080` in your browser
-=======
-# electron-react-toolbox
-Small electron app to test react with react-toolbox
->>>>>>> b341197c3737d615dd617f5d8524aaeb01defbfb
+
+### To get started:
+* Run `npm install`
+
+##### Development
+* Run `npm run dev` to start webpack dev server
+* In another terminal window run `npm run testDev` to start electron
+
+###### One Shot
+* Run `npm run package` to have webpack compile your application into `dist/bundle.js` and `dist/index.html`, and then an electron-packager run will be triggered for the current platform/arch, outputting to `builds/`
+
+###### Manual
+_Recommendation: Update the "postpackage" script call in package.json to specify parameters as you choose and use the `npm run package` command instead of running these steps manually_
+* Run `npm run build` to have webpack compile and output your bundle to `dist/bundle.js`
+* Then you can call electron-packager directly with any commands you choose
+
+If you want to test the production build (In case you think Babili might be breaking something) after running `npm run build` you can then call `npm run testProd`. This will cause electron to load off of the `dist/` build instead of looking for the webpack-dev-server instance.
